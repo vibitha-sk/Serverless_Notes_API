@@ -50,6 +50,30 @@ This project is a demonstration of a fully automated, cloud-native, serverless C
 4. Workspace after Authentication.
 ![Workspace](images/Authenticated_Workspace.png)
 
+5. Storage Verification (Cosmos DB Container)
+
+
+### 🚀 API Endpoints
+
+All endpoints require `Authorization: Bearer <access_token>` and return JSON.
+
+| Method | Path | Purpose | Input | Cosmos DB Operation |
+|---|---|---|---|---|
+| POST | `/api/notes` | Create a new note | JSON body (`title`, `note`) | `create_item` |
+| GET | `/api/notes` | List caller's notes | None (owner from JWT) | `query_items` |
+| GET | `/api/notes/{id}` | Get a single note | Path param (`id`) | `read_item` |
+| PUT | `/api/notes/{id}` | Update a note | Path param + JSON body | `replace_item` |
+| DELETE | `/api/notes/{id}` | Delete a note | Path param (`id`) | `delete_item` |
+
+| Aspect | Behavior |
+|---|---|
+| Authentication | Entra External ID JWT (Bearer token, RS256) |
+| Authorization | Owner scoped — callers can only access their own notes |
+| Content-Type | `application/json` |
+| Unauthenticated | HTTP 401 |
+| Not found / wrong owner | HTTP 404 |
+
+
 
 
 ### ⚙️ How It Works
