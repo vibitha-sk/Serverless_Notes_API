@@ -51,6 +51,7 @@ This project is a demonstration of a fully automated, cloud-native, serverless C
 ![Workspace](images/Authenticated_Workspace.png)
 
 5. Storage Verification (Cosmos DB Container)
+![DB](images/cosmos_DB.png)
 
 
 ### 🚀 API Endpoints
