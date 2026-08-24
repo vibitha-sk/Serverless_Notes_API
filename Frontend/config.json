@@ -1,0 +1,6 @@
+{
+  "authority": "https://myNotesAPI.ciamlogin.com/fa323d6f-ff62-40dd-ac8d-7c3ed6f9b3ef",
+  "clientId": "cc22c86b-60be-48b5-b0e6-dc77f319b617",
+  "redirectUri": "https://notesapistg.z19.web.core.windows.net/callback.html",
+  "apiBaseUrl": "https://notes-functionapp-adehe8hyekbrc0e2.centralus-01.azurewebsites.net/api"
+}

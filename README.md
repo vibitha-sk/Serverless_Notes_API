@@ -2,7 +2,7 @@
 > Simple Serverless multi-user Cloud-Native CRUD API
 
 ### 📌 Overview
-This project is a demonstration of a fully automated, cloud-native, serverless CRUD API buit on Azure using Azure Functions, Azure Cosmos DB, and Azure Blob Storage. It supports multi-user data isolation and is secured with Microsoft Entra ID.
+This project is a demonstration of a fully automated, cloud-native, serverless CRUD API buit on Azure using Azure Functions, Azure Cosmos DB, and Azure Blob Storage. It supports multi-user data isolation and is secured with Microsoft External Entra ID.
 
 ### 🏗️ Setup Architecture
 ![setup](images/Architecture_Diagram.png)
@@ -22,3 +22,43 @@ This project is a demonstration of a fully automated, cloud-native, serverless C
 - Managed NoSQL Storage — Uses Cosmos DB (SQL API) with a provisioned throughput container, partition key /owner, and UUID-based item IDs.
 
 - Browser-Based Test Client — A simple static website built by HTML demonstrates real-time interaction with the API without requiring additional tooling.
+
+
+
+### 🔑 External Entra ID Setup
+*Create Entra External ID Tenant*
+![ExternalT](images/ExternalTenant.png)
+
+*Sign-In/Sign-Up UserFlow*
+
+![UserFlow](images/UserFlow.png)
+
+*Register SPA in External Tenant* 
+![AppRegis](images/AppRegistration.png)
+
+### 🪧Application Flow & Demonstration
+
+1. Frontend Landing Page: The initial view of the Static Web App before logging in.
+![landing_page](images/landing_page.png)
+
+2. SignIn/SignUp.
+![Account_Creation](images/SignIn:SignUp.png)
+
+3. JWT Email Verification
+![email](images/email.png)
+
+4. Workspace after Authentication.
+![Workspace](images/Authenticated_Workspace.png)
+
+
+
+### ⚙️ How It Works
+
+> This is a serverless microservice architecture where Azure Functions handle HTTP routing and JWT validation, Cosmos DB provides fully managed NoSQL persistence scoped per authenticated user, and Blob Storage hosts the static frontend.
+
+
+
+
+
+
+
