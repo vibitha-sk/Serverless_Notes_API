@@ -38,20 +38,35 @@ This project is a demonstration of a fully automated, cloud-native, serverless C
 
 ### 🪧Application Flow & Demonstration
 
-1. Frontend Landing Page: The initial view of the Static Web App before logging in.
+1. Test API locally with postman
+![Postman](images/API_CALL.png)
+
+2. Static Website and its Primary Endpoint
+![Primary_Endpoint](images/static_web.png)
+
+3. Frontend Landing Page: The initial view of the Static Web App before logging in.
 ![landing_page](images/landing_page.png)
 
-2. SignIn/SignUp.
+4. SignIn/SignUp.
 ![Account_Creation](images/SignIn:SignUp.png)
 
-3. JWT Email Verification
+5. JWT Email Verification
 ![email](images/email.png)
 
-4. Workspace after Authentication.
+6. Multi-user Support
+
+![multi-user](images/multi-user.png)
+
+
+7. Workspace after Authentiaction
 ![Workspace](images/Authenticated_Workspace.png)
 
-5. Storage Verification (Cosmos DB Container)
+
+
+7. Storage Verification (Cosmos DB Container)
 ![DB](images/cosmos_DB.png)
+
+
 
 
 ### 🚀 API Endpoints
